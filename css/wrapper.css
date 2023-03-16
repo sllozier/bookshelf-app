@@ -1,0 +1,18 @@
+.wrapper {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(0.25turn, darkblue, lightblue, gold);
+  background: linear-gradient(0.25turn, darkblue, lightblue, gold);
+  background-color: darkblue;
+  z-index: 2;
+}
+
+.wrapper.active {
+  right: 300px;
+}

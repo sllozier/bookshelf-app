@@ -1,0 +1,37 @@
+@import url(./form.css);
+@import url(./text.css);
+@import url(./menu.css);
+@import url(./wrapper.css);
+@import url(./book.css);
+@import url(./button.css);
+@import url(./icon.css);
+@import url(./footer.css);
+
+* {
+  font: 400 18px helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .menu ul li {
+    padding: 0.6em;
+  }
+
+  .wrapper {
+    padding-left: 2em;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}

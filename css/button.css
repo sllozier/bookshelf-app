@@ -1,0 +1,232 @@
+/* Favorite Button */
+
+.favBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.favBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+/* Submit Button*/
+
+.subBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.subBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+/* Search, Favorite Update, Count Buttons*/
+
+.searchBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.searchBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.favUpdateBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.favUpdateBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.countBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.countBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.nonEngBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.nonEngBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.avgSubBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.avgSubBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+/* Comments buttons */
+
+.commBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.commBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.commLstBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.commLstBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.hideBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.hideBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+/* Menu Buttons */
+
+.regBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.regBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.homeBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.homeBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.aboutBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.aboutBtn:hover {
+  background-color: black;
+  color: gold;
+}
+
+.contactBtn {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+}
+
+.contactBtn:hover {
+  background-color: black;
+  color: gold;
+}

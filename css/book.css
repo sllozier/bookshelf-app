@@ -1,0 +1,107 @@
+/* Book list and list items */
+
+.books ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.books li {
+  line-height: 1.5;
+  text-indent: -30px;
+  padding: 8px 0 8px 30px;
+}
+
+.books li:before {
+  float: left;
+  display: block;
+  content: "\01F49B";
+  margin: 0 30px 0 0;
+}
+
+/* content: '↘'; */
+.searchSort {
+  display: block;
+}
+
+.search input[type="text"],
+select,
+textarea {
+  width: 30%;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: white;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Counters Dropdown */
+
+.dropdown {
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  background: gold;
+  border: solid 1px lightblue;
+  width: 320px;
+  cursor: pointer;
+}
+
+.viewCounters {
+  color: #01112b;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 2.5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.counterDropdown {
+  height: 230px;
+}
+
+.counterDropdown a {
+  color: #01112b;
+}
+
+.counterDropdown li {
+  font-size: 1em;
+  padding: 14px 6px;
+  border-top: solid 1px lightblue;
+}
+
+.dropdown.closed .counterDropdown {
+  height: 0px;
+}
+
+.dropdown.closed .viewCounters span {
+  transform: rotate(180deg);
+}
+
+/* Comment items */
+.commToggle li:before {
+  float: left;
+  display: block;
+  content: "";
+  margin: 0 30px 0 0;
+}
+
+.listOComm {
+  line-height: 1.5;
+  text-indent: -30px;
+  padding: 8px 0 8px 30px;
+}
+
+.listOComm li:before {
+  float: left;
+  display: block;
+  content: "\01F49B";
+  margin: 0 30px 0 0;
+}

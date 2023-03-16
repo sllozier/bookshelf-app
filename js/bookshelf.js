@@ -23,7 +23,9 @@ class Bookshelf {
         bookInfo.author,
         bookInfo.language,
         bookInfo.subject,
-        bookInfo.title
+        bookInfo.title,
+        bookInfo.comments,
+        this
       );
       this.addBook(book);
     });
@@ -33,15 +35,15 @@ class Bookshelf {
     this.sortVisibleBooks((a, b) => a.title.localeCompare(b.title));
 
     this.render();
-  };
+  }
 
   /**
    * Add a book to the Bookshelf
    * @param {Book} book
    */
-  addBook (book) {
+  addBook(book) {
     this.books.push(book);
-  };
+  }
 
   /**
    * Use internal Book array to rerender the
@@ -53,7 +55,7 @@ class Bookshelf {
     const books = this.visibleBooks.map((b) => b.render());
     ul.replaceChildren(...books);
     this.htmlElement.replaceChildren(ul);
-  };
+  }
 
   /**
    * @returns the number of favorite books
@@ -63,7 +65,7 @@ class Bookshelf {
       (count, book) => (book.isFavorite ? count + 1 : count),
       0
     );
-  };
+  }
 
   /**
    * Filter visible books according to a given criteria function
@@ -72,7 +74,7 @@ class Bookshelf {
   filterVisibleBooks(criteria) {
     this.visibleBooks = this.books.filter(criteria);
     this.render();
-  };
+  }
 
   /**
    * Sort visible books according to a given compare function
@@ -81,5 +83,41 @@ class Bookshelf {
   sortVisibleBooks(compareFn) {
     this.visibleBooks.sort(compareFn);
     this.render();
-  };
+  }
+
+  //Clear Add Book form
+  clearFields() {
+    document.querySelector("#title").value = "";
+    document.querySelector("#author").value = "";
+    document.querySelector("#language").value = "";
+    document.querySelector("#subject").value = [];
+  }
+
+  //Clear add comment form
+  clearComment() {
+    document.querySelector(".commIpt").value = "";
+  }
+
+  //EC: Get book count
+  bookCount() {
+    return this.visibleBooks.length;
+  }
+
+  //EC: Get all books that aren't english
+  booksByLanguage() {
+    return this.visibleBooks.reduce(
+      (accum, book) => (book.language === "en" ? accum : accum + 1),
+      0
+    );
+  }
+
+  //EC: get the average number of subjects for books
+  averageSubjects() {
+    return Math.floor(
+      this.visibleBooks.reduce(
+        (accum, book) => accum + book.subject.length / this.visibleBooks.length,
+        0
+      )
+    );
+  }
 }

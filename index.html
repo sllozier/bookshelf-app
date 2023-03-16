@@ -5,33 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav>
-      <section class="search">
-        <input placeholder="Search" />
-        <button class="searchBtn">Search</button>
-      </section>
-      <section class="sort">
-        <label>Sort by</label>
-        <select class="sortBy">
-          <option value="titleaz">Title A-Z</option>
-          <option value="titleza">Title Z-A</option>
-        </select>
-      </section>
-      <section>
-        You have <span class="favCount">0</span> favorite books.
-        <button class="favUpdateBtn">Update</button>
-      </section>
-    </nav>
-    <main id="app">
-      <ul class="books"></ul>
-    </main>
+    <section class="wrapper">
+      <nav class="menu">
+        <ul id="menuList">
+          <!-- <li id="regMenuItem"><button class="regBtn">Register</button></li> -->
+          <li id="homeMenuItem"><button class="homeBtn">Home</button></li>
+          <li id="aboutMenuItem"><button class="aboutBtn">About</button></li>
+          <li id="contactMenuItem">
+            <button class="contactBtn">Contact</button>
+          </li>
+        </ul>
+      </nav>
 
+      <div id="app">
+        <!-- <article id="registration">
+          <div class="container">
+            <div class="container-msg-modal">
+              <div
+                class="container-modal-content--success container-modal-content"
+              >
+                <span>Welcome!</span>
+              </div>
+              <div
+                class="container-modal-content--error container-modal-content"
+              >
+                <span>Failed Login</span>
+              </div>
+            </div>
+            <form action="" id="regForm">
+              <div class="container-form-userName container-form-input">
+                <label for="userName">User Name</label>
+                <input
+                  type="text"
+                  placeholder="User Name"
+                  id="userName"
+                  name="userName"
+                  required
+                />
+              </div>
+              <div class="container-form-userPassword container-form-input">
+                <label for="userPassword">Password</label>
+                <input
+                  type="password"
+                  placeholder="User Password"
+                  id="userPassword"
+                  name="userPassword"
+                  onfocus="this.value=''"
+                  required
+                />
+              </div>
+              <button type="submit" class="regBtn">Submit</button>
+            </form>
+          </div>
+        </article> -->
+        <article id="home">
+          <div class="dropdown closed">
+            <button class="viewCounters">View Counters<span>⌄</span></button>
+            <ul class="counterDropdown">
+              <li id="favDrop"><a href="#">Favorite Count</a></li>
+              <li id="totalDrop"><a href="#">Total Books</a></li>
+              <li id="nonEngDrop"><a href="#">Non-English Books</a></li>
+              <li id="avgSubsDrop"><a href="#">Average Subjects</a></li>
+            </ul>
+          </div>
+          <section id="favCount">
+            <h3>You have <span class="favCount">0</span> favorite books.</h3>
+            <input type="submit" value="Update" class="favUpdateBtn" />
+          </section>
+
+          <section id="bookCount">
+            <h3>
+              You have <span class="bookCount">0</span> books in your bookshelf.
+            </h3>
+            <input type="submit" value="Update" class="countBtn" />
+          </section>
+
+          <section id="nonEngCount">
+            <h3>
+              You have <span class="nonEngCount">0</span> non-english books in
+              your bookshelf.
+            </h3>
+            <input type="submit" value="Update" class="nonEngBtn" />
+          </section>
+
+          <section id="avgSubCount">
+            <h3>
+              The average number of subjects per book is
+              <span class="avgSubCount">0</span>.
+            </h3>
+            <input type="submit" value="Update" class="avgSubBtn" />
+          </section>
+
+          <div class="search-sort">
+            <section class="search">
+              <input type="text" placeholder="Search" />
+              <input type="submit" value="Search" class="searchBtn" />
+            </section>
+            <section class="sort">
+              <label>Sort by</label>
+              <select class="sortBy">
+                <option value="titleaz">Title A-Z</option>
+                <option value="titleza">Title Z-A</option>
+              </select>
+            </section>
+          </div>
+
+          <form class="book-form">
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="language">Language</label>
+              <input type="text" id="language" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" class="form-control" />
+            </div>
+            <input type="submit" value="Add Book" class="addBtn" />
+          </form>
+
+          <ul class="books"></ul>
+        </article>
+
+        <article id="about">
+          <h2>About Me Page</h2>
+        </article>
+
+        <article id="contact">
+          <h2>Contact Me Page</h2>
+        </article>
+      </div>
+
+      <!-- <footer>
+        <ul class="social">
+          <li>
+            <a href="https://github.com/fullstackacademy/"
+              ><span class="icon icon-github"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.fullstackacademy.com/"
+              ><span class="icon icon-academia"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/school/fullstack-academy"
+              ><span class="icon icon-linkedin"></span
+            ></a>
+          </li>
+        </ul>
+      </footer> -->
+    </section>
     <script src="js/book-data.js"></script>
     <script src="js/book.js"></script>
     <script src="js/bookshelf.js"></script>
+    <script src="js/menu.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
