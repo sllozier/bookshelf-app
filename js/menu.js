@@ -13,7 +13,7 @@ const contactToggle = document.getElementById("contactMenuItem");
 
 //Initial display settings
 // registration.style.display = "block";
-home.style.display = "block";
+home.style.display = "flex";
 about.style.display = "none";
 contact.style.display = "none";
 //regToggle.style.display = "none";
@@ -28,7 +28,7 @@ contact.style.display = "none";
 
 homeToggle.addEventListener("click", () => {
   //registration.style.display = "none";
-  home.style.display = "block";
+  home.style.display = "flex";
   about.style.display = "none";
   contact.style.display = "none";
 });
@@ -36,7 +36,7 @@ homeToggle.addEventListener("click", () => {
 aboutToggle.addEventListener("click", () => {
   //registration.style.display = "none";
   home.style.display = "none";
-  about.style.display = "block";
+  about.style.display = "flex";
   contact.style.display = "none";
 });
 
@@ -44,7 +44,7 @@ contactToggle.addEventListener("click", () => {
   //registration.style.display = "none";
   home.style.display = "none";
   about.style.display = "none";
-  contact.style.display = "block";
+  contact.style.display = "flex";
 });
 
 //Counter dropdown: This is optional to declutter the page.
@@ -68,7 +68,7 @@ const avgSubToggle = document.getElementById("avgSubsDrop");
 
 //Toggle between dropdown options to show the count selected on the page
 favToggle.addEventListener("click", () => {
-  favoriteCount.style.display = "block";
+  favoriteCount.style.display = "flex";
   totalBookCount.style.display = "none";
   nonEngCount.style.display = "none";
   avgSubCount.style.display = "none";
@@ -76,7 +76,7 @@ favToggle.addEventListener("click", () => {
 
 bookToggle.addEventListener("click", () => {
   favoriteCount.style.display = "none";
-  totalBookCount.style.display = "block";
+  totalBookCount.style.display = "flex";
   nonEngCount.style.display = "none";
   avgSubCount.style.display = "none";
 });
@@ -84,7 +84,7 @@ bookToggle.addEventListener("click", () => {
 nonEngToggle.addEventListener("click", () => {
   favoriteCount.style.display = "none";
   totalBookCount.style.display = "none";
-  nonEngCount.style.display = "block";
+  nonEngCount.style.display = "flex";
   avgSubCount.style.display = "none";
 });
 
@@ -92,5 +92,5 @@ avgSubToggle.addEventListener("click", () => {
   favoriteCount.style.display = "none";
   totalBookCount.style.display = "none";
   nonEngCount.style.display = "none";
-  avgSubCount.style.display = "block";
+  avgSubCount.style.display = "flex";
 });

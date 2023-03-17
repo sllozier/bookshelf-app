@@ -20,7 +20,7 @@
         </ul>
       </nav>
 
-      <div id="app">
+      <div id="app" class="app">
         <!-- <article id="registration">
           <div class="container">
             <div class="container-msg-modal">
@@ -61,9 +61,11 @@
             </form>
           </div>
         </article> -->
-        <article id="home">
+        <article id="home" class="article">
           <div class="dropdown closed">
-            <button class="viewCounters">View Counters<span>⌄</span></button>
+            <button class="viewCounters">
+              View Counters<span class="smallArrow">&#x25B4</span>
+            </button>
             <ul class="counterDropdown">
               <li id="favDrop"><a href="#">Favorite Count</a></li>
               <li id="totalDrop"><a href="#">Total Books</a></li>
@@ -71,19 +73,19 @@
               <li id="avgSubsDrop"><a href="#">Average Subjects</a></li>
             </ul>
           </div>
-          <section id="favCount">
+          <section id="favCount" class="counters">
             <h3>You have <span class="favCount">0</span> favorite books.</h3>
             <input type="submit" value="Update" class="favUpdateBtn" />
           </section>
 
-          <section id="bookCount">
+          <section id="bookCount" class="counters">
             <h3>
               You have <span class="bookCount">0</span> books in your bookshelf.
             </h3>
             <input type="submit" value="Update" class="countBtn" />
           </section>
 
-          <section id="nonEngCount">
+          <section id="nonEngCount" class="counters">
             <h3>
               You have <span class="nonEngCount">0</span> non-english books in
               your bookshelf.
@@ -91,7 +93,7 @@
             <input type="submit" value="Update" class="nonEngBtn" />
           </section>
 
-          <section id="avgSubCount">
+          <section id="avgSubCount" class="counters">
             <h3>
               The average number of subjects per book is
               <span class="avgSubCount">0</span>.
@@ -114,6 +116,7 @@
           </div>
 
           <form class="book-form">
+            <h2>Add A Book</h2>
             <div class="form-group">
               <label for="author">Author</label>
               <input type="text" id="author" class="form-control" />
@@ -136,11 +139,11 @@
           <ul class="books"></ul>
         </article>
 
-        <article id="about">
+        <article id="about" class="article">
           <h2>About Me Page</h2>
         </article>
 
-        <article id="contact">
+        <article id="contact" class="article">
           <h2>Contact Me Page</h2>
         </article>
       </div>

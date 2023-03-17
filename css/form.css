@@ -1,5 +1,18 @@
 form {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  text-align: center;
+}
+
+.book-form h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #01112b;
+  margin-bottom: 0.5rem;
+  /* line-height: 1.5em; */
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 label {
@@ -11,7 +24,7 @@ label {
 input[type="text"],
 select,
 textarea {
-  width: 30%;
+  width: 100%;
   padding: 12px;
   border-radius: 4px;
   border: none;
@@ -146,4 +159,12 @@ textarea:focus {
 
 .enabled {
   display: block;
+}
+
+/* Comment Form */
+
+.commForm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }

@@ -25,11 +25,21 @@ class Book {
    */
   render() {
     /* NOTE: Change render! This is currently a barebones template. */
+    const bookWrapper = document.createElement("div");
+    bookWrapper.classList.add("book-wrapper");
+
     const li = document.createElement("li");
-    li.textContent = this.title;
+    li.classList.add("book-item");
+    bookWrapper.append(li);
+
+    const bookTitle = document.createElement("p");
+    bookTitle.classList.add("book-title");
+    bookTitle.textContent = this.title;
+    li.append(bookTitle);
 
     // Create favorite button
     const favButton = document.createElement("button");
+    favButton.classList.add("favBtn");
     favButton.textContent = this.isFavorite ? "❤️" : "♡";
     li.append(favButton);
 
@@ -39,12 +49,18 @@ class Book {
       favButton.textContent = this.isFavorite ? "❤️" : "♡";
     });
 
+    //Create Comment wrapper div
+
+    const commentWrapper = document.createElement("div");
+    commentWrapper.classList.add("commWrapper");
+    li.append(commentWrapper);
+
     //Create Comment Toggle ul
     const commentToggle = document.createElement("ul");
     commentToggle.classList.add("commToggle");
     //Using a list to keep this simple but the toggle can be done
     //with other elements
-    li.append(commentToggle);
+    commentWrapper.append(commentToggle);
 
     //Create Button li
     const buttonItem = document.createElement("li");
@@ -60,7 +76,7 @@ class Book {
     const commentButton = document.createElement("button");
     commentButton.classList.add("commBtn");
     commentButton.textContent = "✏️ Write Comment";
-    commentButton.style.display = "block";
+    commentButton.style.display = "flex";
     //setting the display to block so button showing is the initial state
     buttonItem.append(commentButton);
 
@@ -89,7 +105,7 @@ class Book {
     buttonItem.addEventListener("click", () => {
       this.makeComment = !this.makeComment;
       commentButton.style.display = "none";
-      commentForm.style.display = "block";
+      commentForm.style.display = "flex";
     });
 
     //Add a comment and close the form
@@ -106,7 +122,7 @@ class Book {
         this.bookshelf.render();
         this.makeComment = !this.makeComment; //toggle back to the button
         commentForm.style.display = "none";
-        commentButton.style.display = "block";
+        commentButton.style.display = "flex";
       }
     });
 
@@ -120,7 +136,7 @@ class Book {
     const commentListButton = document.createElement("button");
     commentListButton.classList.add("commLstBtn");
     commentListButton.textContent = "💬 View Comments";
-    commentListButton.style.display = "block";
+    commentListButton.style.display = "flex";
     commentList.append(commentListButton);
 
     //Create ul of comments
@@ -147,23 +163,22 @@ class Book {
     commentListButton.addEventListener("click", () => {
       this.showComments = !this.showComments;
       commentListButton.style.display = "none";
-      listOfComments.style.display = "block";
+      listOfComments.style.display = "flex";
     });
 
     hideButton.addEventListener("click", () => {
       this.showComments = !this.showComments;
-      commentListButton.style.display = "block";
+      commentListButton.style.display = "flex";
       listOfComments.style.display = "none";
     });
 
     //EC: Create Category
-    const category = document.createElement("span");
+    const category = document.createElement("button");
     category.classList.add("bookCat");
-    category.style.fontWeight = "bold";
     category.textContent =
-      this.numPages > 100 ? " Category: Novel" : " Category: Short Story";
+      this.numPages > 100 ? "📕 Category: Novel" : "📕 Category: Short Story";
     li.append(category);
 
-    return li;
+    return bookWrapper;
   }
 }

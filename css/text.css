@@ -35,3 +35,15 @@ p {
   position: relative;
   z-index: 10;
 }
+
+.book-title {
+  font-size: 1em;
+  color: floralwhite;
+  font-weight: 400;
+  margin-left: 2rem;
+  width: 80%;
+}
+
+.counters h3 {
+  color: #01112b;
+}

@@ -1,33 +1,68 @@
 /* Book list and list items */
-
+.books {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
 .books ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 }
 
-.books li {
+.book-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.book-wrapper li {
+  list-style: none;
+}
+.book-item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
   line-height: 1.5;
-  text-indent: -30px;
+  /* text-indent: -30px; */
   padding: 8px 0 8px 30px;
 }
 
-.books li:before {
+.book-wrapper li:before {
   float: left;
   display: block;
   content: "\01F49B";
-  margin: 0 30px 0 0;
+
+  /* margin: 0 30px 0 0; */
 }
 
 /* content: '↘'; */
-.searchSort {
-  display: block;
+.search-sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
 }
 
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .search input[type="text"],
 select,
 textarea {
-  width: 30%;
+  width: 80%;
   padding: 12px;
   border-radius: 4px;
   border: none;
@@ -36,7 +71,25 @@ textarea {
   background-color: white;
   margin-top: 6px;
   margin-bottom: 16px;
+  margin-right: 1em;
   resize: vertical;
+}
+
+.sort {
+  width: 26%;
+  margin-left: 5.2rem;
+}
+
+.sort label {
+  color: #01112b;
+}
+
+.sort select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
 }
 
 /* Counters Dropdown */
@@ -45,26 +98,35 @@ textarea {
   transition: all 0.2s ease-in-out;
   overflow: hidden;
   background: gold;
-  border: solid 1px lightblue;
-  width: 320px;
+  width: 200px;
   cursor: pointer;
+  margin: 1rem;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .viewCounters {
   color: #01112b;
   background-color: gold;
   border: none;
-  border-radius: 8px;
-  padding: 10px;
+
+  padding: 10px 10px 10px 18px;
   font-size: 1em;
   cursor: pointer;
-  margin: 2.5px;
+  margin-left: 2.5px;
   display: flex;
   justify-content: space-around;
 }
 
+.smallArrow {
+  margin-left: 1.5em;
+  /* margin-right: 1em; */
+}
 .counterDropdown {
   height: 230px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .counterDropdown a {
@@ -84,19 +146,50 @@ textarea {
 .dropdown.closed .viewCounters span {
   transform: rotate(180deg);
 }
-
+.counters {
+  align-items: center;
+  justify-content: center;
+}
+.counters input {
+  margin-left: 2rem;
+}
 /* Comment items */
+/* .commToggle {
+  width: 80%;
+}
+
+.buttonItem {
+  width: 50%;
+} */
+
 .commToggle li:before {
-  float: left;
   display: block;
   content: "";
   margin: 0 30px 0 0;
 }
+.commWrapper {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5;
+  width: 50%;
+  padding: 8px 0 8px 30px;
+}
 
+.commList {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5;
+  width: 50%;
+  padding: 8px 0 8px 30px;
+}
 .listOComm {
   line-height: 1.5;
   text-indent: -30px;
   padding: 8px 0 8px 30px;
+}
+
+.listOComm::before {
+  flex-direction: row;
 }
 
 .listOComm li:before {
@@ -104,4 +197,15 @@ textarea {
   display: block;
   content: "\01F49B";
   margin: 0 30px 0 0;
+}
+
+.bookCat {
+  color: #01112b;
+  background-color: lightblue;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  margin: 2.5px;
+  width: 30%;
 }
