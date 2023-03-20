@@ -16,7 +16,6 @@
 .book-wrapper {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -40,11 +39,10 @@
   float: left;
   display: block;
   content: "\01F49B";
-
-  /* margin: 0 30px 0 0; */
 }
 
-/* content: '↘'; */
+/* Search + Sort */
+
 .search-sort {
   display: flex;
   flex-direction: column;
@@ -120,7 +118,6 @@ textarea {
 
 .smallArrow {
   margin-left: 1.5em;
-  /* margin-right: 1em; */
 }
 .counterDropdown {
   height: 230px;
@@ -153,14 +150,8 @@ textarea {
 .counters input {
   margin-left: 2rem;
 }
-/* Comment items */
-/* .commToggle {
-  width: 80%;
-}
 
-.buttonItem {
-  width: 50%;
-} */
+/* Comment items */
 
 .commToggle li:before {
   display: block;
@@ -198,6 +189,8 @@ textarea {
   content: "\01F49B";
   margin: 0 30px 0 0;
 }
+
+/* Book Categories */
 
 .bookCat {
   color: #01112b;

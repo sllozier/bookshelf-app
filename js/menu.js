@@ -1,47 +1,47 @@
 //Navbar Menu
 //Assign each "view" element to variable
-//const registration = document.getElementById("registration");
+const registration = document.getElementById("registration");
 const home = document.getElementById("home");
 const about = document.getElementById("about");
 const contact = document.getElementById("contact");
 
 //Assign each menu button to variable
-//const regToggle = document.getElementById("regMenuItem");
+const regToggle = document.getElementById("regMenuItem");
 const homeToggle = document.getElementById("homeMenuItem");
 const aboutToggle = document.getElementById("aboutMenuItem");
 const contactToggle = document.getElementById("contactMenuItem");
 
 //Initial display settings
-// registration.style.display = "block";
-home.style.display = "flex";
+registration.style.display = "flex";
+home.style.display = "none";
 about.style.display = "none";
 contact.style.display = "none";
-//regToggle.style.display = "none";
+regToggle.style.display = "none";
 
 //Toggle between views when menu buttons are clicked
-// regToggle.addEventListener("click", () => {
-//   registration.style.display = "block";
-//   home.style.display = "none";
-//   about.style.display = "none";
-//   contact.style.display = "none";
-// });
+regToggle.addEventListener("click", () => {
+  registration.style.display = "flex";
+  home.style.display = "none";
+  about.style.display = "none";
+  contact.style.display = "none";
+});
 
 homeToggle.addEventListener("click", () => {
-  //registration.style.display = "none";
+  registration.style.display = "none";
   home.style.display = "flex";
   about.style.display = "none";
   contact.style.display = "none";
 });
 
 aboutToggle.addEventListener("click", () => {
-  //registration.style.display = "none";
+  registration.style.display = "none";
   home.style.display = "none";
   about.style.display = "flex";
   contact.style.display = "none";
 });
 
 contactToggle.addEventListener("click", () => {
-  //registration.style.display = "none";
+  registration.style.display = "none";
   home.style.display = "none";
   about.style.display = "none";
   contact.style.display = "flex";

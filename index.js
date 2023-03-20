@@ -133,17 +133,73 @@ avgSubBtn.addEventListener("click", () => {
 
 //#endregion Book Count Feature
 
+// --------------------------
+//#region Registration Feature
+// --------------------------
+const errorMsg = document.querySelector(".container-modal-content--error");
+const successMsg = document.querySelector(".container-modal-content--success");
+const userName = document.querySelector("#userName");
+const userPassword = document.querySelector("#userPassword");
+const registrationForm = document.getElementById("regForm");
+const modal = document.querySelector(".container-msg-modal");
+const modalContent = document.querySelectorAll(".container-modal-content");
 const menu = document.getElementById("menuList");
 
+menu.style.display = "none";
+
+//-----------------------
+//USE THIS DEFAULT LOGIN
+//-----------------------
+const login = {
+  userName: "bookshelf",
+  password: "bookshelf",
+};
+
+registrationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  userLogin();
+});
+
+function userLogin() {
+  const nameVal = userName.value,
+    passwordVal = userPassword.value;
+
+  let isLogin = true;
+
+  if (nameVal === login.userName && passwordVal === login.password) {
+    verifyLogin(isLogin);
+    seeHomepage();
+  } else {
+    verifyLogin(!isLogin);
+  }
+}
+
+function verifyLogin(isLogin) {
+  modal.classList.add("enabled");
+
+  if (isLogin) {
+    successMsg.classList.add("enabled");
+  } else {
+    errorMsg.classList.add("enabled");
+  }
+  setTimeout(function () {
+    modal.classList.remove("enabled");
+    registrationForm.reset();
+    modalContent.forEach((content) => {
+      content.classList.remove("enabled");
+    });
+  }, 2000);
+}
+
 function seeHomepage() {
-  //const registration = document.getElementById("registration");
+  const registration = document.getElementById("registration");
   const home = document.getElementById("home");
   const about = document.getElementById("about");
   const contact = document.getElementById("contact");
 
-  //registration.style.display = "none";
-  home.style.display = "block";
+  registration.style.display = "none";
+  home.style.display = "flex";
   about.style.display = "none";
   contact.style.display = "none";
-  menu.style.display = "block";
+  menu.style.display = "flex";
 }

@@ -1,7 +1,14 @@
-form {
+/* Add book form*/
+
+.book-form-container {
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 400px;
+  height: 500px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  width: 20%;
+  justify-content: center;
   text-align: center;
 }
 
@@ -10,7 +17,6 @@ form {
   font-weight: bold;
   color: #01112b;
   margin-bottom: 0.5rem;
-  /* line-height: 1.5em; */
   text-transform: uppercase;
   text-decoration: underline;
 }
@@ -22,6 +28,7 @@ label {
 }
 
 input[type="text"],
+input[type="password"],
 select,
 textarea {
   width: 100%;
@@ -67,7 +74,7 @@ textarea:focus {
 .container {
   background: rgba(255, 255, 255, 0.5);
   max-width: 400px;
-  height: 200px;
+  height: 300px;
   width: 100%;
   margin: 250px auto 0;
   border-radius: 5px;
@@ -83,6 +90,13 @@ textarea:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
 }
 
 .container-form-input {

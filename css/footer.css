@@ -1,11 +1,11 @@
 .social {
-  position: absolute;
   z-index: 10;
   bottom: 2em;
   left: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10rem;
 }
 
 .social li {
