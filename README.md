@@ -5,8 +5,10 @@
 <br/>
 <img width="120" src="images/bookshelf_app.png"/>
  <br/>
-  <b><a href="https://sllozier.github.io/guessing-game/" target="_blank">Live Demo</a></b>
-  <br/><br/>
+  <b><a href="https://sllozier.github.io/bookshelf-app/" target="_blank">Live Demo</a></b>
+  <br/>
+ username: bookshelf | password: bookshelf
+  <br/>
   </p>
 
 ---
