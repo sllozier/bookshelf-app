@@ -1,10 +1,5 @@
-/**
- * Book represents information about a book.
- * @param {string[]} authors array of the book's authors
- * @param {string} language the language the book is written in
- * @param {string[]} subject  array of book topics
- * @param {string} title title of the book
- */
+// Book represents information about a book.
+
 class Book {
   constructor(authors, language, subject, title, comments = [], bookshelf) {
     this.authors = authors;
@@ -20,11 +15,9 @@ class Book {
     this.category = "";
   }
 
-  /**
-   * @returns a list item representing this Book
-   */
+  // render book as li
+
   render() {
-    /* NOTE: Change render! This is currently a barebones template. */
     const bookWrapper = document.createElement("div");
     bookWrapper.classList.add("book-wrapper");
 

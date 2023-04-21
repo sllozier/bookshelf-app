@@ -1,9 +1,5 @@
-/**
- * Bookshelf is an internal data structure
- * that manages Books.
- * @param {HTMLElement} htmlElement the element to render to
- * @param {Book[]} books an optional array of Books
- */
+// Bookshelf is an internal data structure that manages Books.
+
 class Bookshelf {
   constructor(htmlElement, books = []) {
     this.books = books;
@@ -11,11 +7,7 @@ class Bookshelf {
     this.visibleBooks = books;
   }
 
-  /**
-   * Process an array of raw book information
-   * to initialize Bookshelf properties
-   * @param {{author: string[], language: string, subject: string[], title: string}[]} data an array of book data
-   */
+  // Process an array of raw book information to initialize Bookshelf properties
   seed(data) {
     // Load in the data
     data.forEach((bookInfo) => {
@@ -37,29 +29,20 @@ class Bookshelf {
     this.render();
   }
 
-  /**
-   * Add a book to the Bookshelf
-   * @param {Book} book
-   */
+  // Add a book to the Bookshelf
   addBook(book) {
     this.books.push(book);
   }
 
-  /**
-   * Use internal Book array to rerender the
-   * existing DOM element for this Bookshelf.
-   */
+  // Use internal Book array to rerender the existing DOM element for this Bookshelf.
   render() {
-    /* NOTE: Change render! This is currently a barebones template. */
     const ul = document.createElement("ul");
     const books = this.visibleBooks.map((b) => b.render());
     ul.replaceChildren(...books);
     this.htmlElement.replaceChildren(ul);
   }
 
-  /**
-   * @returns the number of favorite books
-   */
+  // returns the number of favorite books
   countFavoriteBooks() {
     return this.books.reduce(
       (count, book) => (book.isFavorite ? count + 1 : count),
@@ -67,19 +50,13 @@ class Bookshelf {
     );
   }
 
-  /**
-   * Filter visible books according to a given criteria function
-   * @param {(book: Book) => boolean} criteria
-   */
+  // Filter visible books according to a given criteria function
   filterVisibleBooks(criteria) {
     this.visibleBooks = this.books.filter(criteria);
     this.render();
   }
 
-  /**
-   * Sort visible books according to a given compare function
-   * @param {(a: Book, b: Book) => number} compareFn
-   */
+  // Sort visible books according to a given compare function
   sortVisibleBooks(compareFn) {
     this.visibleBooks.sort(compareFn);
     this.render();
