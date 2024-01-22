@@ -36,7 +36,7 @@
 <kbd>
 <a href="mailto:sarah.lozier@gmail.com">
     <img alt="Email me! - sarah.lozier@gmail.com" src="https://img.shields.io/badge/-sarah.lozier@com-D14836?style=flat&logo=gmail&logoColor=white" />
-  </a> | <a href="https://www.sllozier/">
+  </a> | <a href="https://www.sllozier.com">
     <img alt="Personal Website - sllozier.com" src="https://img.shields.io/badge/-sllozier.com-a75fff?style=flat&logo=aboutdotme&logoColor=white" />
   </a> | <a href="https://www.linkedin.com/in/sarah-l-lozier/">
     <img alt="LinkedIn - Sarah Lozier" src="https://img.shields.io/badge/-Sarah_Lozier-0072b1?style=flat&logo=linkedin&logoColor=white" />
